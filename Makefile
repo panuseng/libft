@@ -20,7 +20,7 @@ $(NAME): $(OBJECTS)
 	ar rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 clean:
-	/bin/rm -f $(OBJECTS)
+	/bin/rm -f $(OBJECTS)cc
 	/bin/rm -f .ft_*
 	/bin/rm -f .*.swp
 fclean: clean

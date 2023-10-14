@@ -6,11 +6,11 @@
 /*   By: plaophit <plaophit@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 20:13:26 by plaophit          #+#    #+#             */
-/*   Updated: 2023/09/29 20:13:30 by plaophit         ###   ########.fr       */
+/*   Updated: 2023/10/14 00:26:25 by plaophit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii (int c)
+int	ft_isascii(int c)
 {
 	return (c >= 0 && c < 127);
 }

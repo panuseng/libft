@@ -1,32 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plaophit <plaophit@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/29 20:14:19 by plaophit          #+#    #+#             */
-/*   Updated: 2023/10/14 13:52:23 by plaophit         ###   ########.fr       */
+/*   Created: 2023/10/14 19:15:24 by plaophit          #+#    #+#             */
+/*   Updated: 2023/10/15 02:45:48 by plaophit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	a;
+	size_t	i;
 
-	a = 0 ;
-	while (c[a])
-		a++;
-	return (a);
+	i = 0;
+	while ((s1[i] || s2[i]) && i < n)
+	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
+	}
+	return (0);
 }
 
-// int main(void)
-// {
-// 	char *str;
+// int main () {
+//    char str1[15];
+//    char str2[15];
+//    int ret;
 
-// 	str = "mahmudul";
-// 	printf("%zu", ft_strlen(str));
-// 	return (0);
+//    strcpy(str1, "abcdef");
+//    strcpy(str2, "ABCDEF");
+
+//    ret = ft_strncmp(str1, str2, 4);
+
+//    printf("%d",ret);
+
+//    return(0);
 // }

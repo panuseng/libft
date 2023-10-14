@@ -1,16 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plaophit <plaophit@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/29 20:12:30 by plaophit          #+#    #+#             */
-/*   Updated: 2023/10/14 00:26:03 by plaophit         ###   ########.fr       */
+/*   Created: 2023/10/14 04:38:30 by plaophit          #+#    #+#             */
+/*   Updated: 2023/10/14 14:07:20 by plaophit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
 {
-	return (ft_isdigit(c) || ft_isalpha(c));
+	int	i;
+
+	i = ft_strlen(s)-1;
+	while (s[i] && s[i] != (char) c)
+		i--;
+	if (s[i] == (char) c)
+		return ((char *)&s[i]);
+	return (0);
 }

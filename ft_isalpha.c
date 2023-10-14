@@ -6,11 +6,11 @@
 /*   By: plaophit <plaophit@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 20:11:13 by plaophit          #+#    #+#             */
-/*   Updated: 2023/09/29 20:11:15 by plaophit         ###   ########.fr       */
+/*   Updated: 2023/10/14 02:32:39 by plaophit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha (int c)
+int	ft_isalpha(int c)
 {
-	return (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z');
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
 }

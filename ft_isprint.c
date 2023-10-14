@@ -6,11 +6,11 @@
 /*   By: plaophit <plaophit@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 20:14:02 by plaophit          #+#    #+#             */
-/*   Updated: 2023/09/29 20:14:04 by plaophit         ###   ########.fr       */
+/*   Updated: 2023/10/14 00:26:33 by plaophit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint (int c)
+int	ft_isprint(int c)
 {
 	return (c >= 32 && c < 127);
 }

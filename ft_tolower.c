@@ -6,13 +6,13 @@
 /*   By: plaophit <plaophit@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 20:15:07 by plaophit          #+#    #+#             */
-/*   Updated: 2023/09/29 20:15:11 by plaophit         ###   ########.fr       */
+/*   Updated: 2023/10/14 02:31:24 by plaophit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower (int c)
+int	ft_tolower(int c)
 {
-	if(c >= 'A' && c <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 		return (c += 32);
-	return c ;	
+	return (c);
 }

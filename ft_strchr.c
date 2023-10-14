@@ -3,21 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plaophit <plaophit@student.42bangkok.co    +#+  +:+       +#+        */
+/*   By: intrauser <intrauser@student.42bangkok.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 20:15:26 by plaophit          #+#    #+#             */
-/*   Updated: 2023/09/29 20:15:28 by plaophit         ###   ########.fr       */
+/*   Updated: 2023/10/14 09:36:27 by intrauser        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-char ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	i = 0;
-	while(!s[i])
-		if (s[i] == c)
-			break
-		i++;
-	while(!s[i])
-
+	while (*s && *s != (char) c)
+		s++;
+	if (*s == (char) c)
+		return ((char *)s);
+	return (0);
 }
