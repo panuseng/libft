@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plaophit <plaophit@student.42bangkok.co    +#+  +:+       +#+        */
+/*   By: plaophit <plaophit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 15:09:58 by plaophit          #+#    #+#             */
-/*   Updated: 2023/10/14 19:10:50 by plaophit         ###   ########.fr       */
+/*   Updated: 2023/10/15 12:46:43 by plaophit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	if (i >= dstsize)
 		return (dstsize + ft_strlen(src));
 	start = i;
-		while (i < dstsize - 1 && src[i - start])
-		{
-			dst[i] = src[i - start];
-			i++;
-		}
-		dst[i] = '\0';
+	while (i < dstsize - 1 && src[i - start])
+	{
+		dst[i] = src[i - start];
+		i++;
+	}
+	dst[i] = '\0';
 	return (start + ft_strlen(src));
 }
 
