@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plaophit <plaophit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 02:46:16 by plaophit          #+#    #+#             */
-/*   Updated: 2023/10/15 04:54:31 by plaophit         ###   ########.fr       */
+/*   Updated: 2023/10/15 12:46:26 by plaophit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t j;
+	size_t	j;
 	size_t	i;
-	
+
 	j = 0;
 	if (!*needle)
-		return((char *)haystack);
+		return ((char *) haystack);
 	while (*haystack && j < len)
 	{
 		if (*haystack == *needle)
