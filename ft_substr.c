@@ -14,10 +14,24 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*a;
-	char	*b;
+	char	*s;
 
+	s = (char *)malloc(sizeof(char) * len + 1);
 	if (!*s)
 		return ('\0');
-	if (ft_strlen(s) < start)
+	if (ft_strlen(s) < (size_t) start)
+		return (0);
+}
+
+int	main(void)
+{
+	char	*str1;
+	unsigned int start;
+	int		len;
+
+	start = 7;
+	len = 10;
+	str1 = "lorem ipsum";
+
+	printf("%s", ft_substr(str1, start, len));
 }
