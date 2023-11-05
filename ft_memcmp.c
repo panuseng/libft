@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seng <seng@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/13 00:35:35 by plaophit          #+#    #+#             */
-/*   Updated: 2023/11/06 00:08:16 by seng             ###   ########.fr       */
+/*   Created: 2023/11/06 03:04:08 by seng              #+#    #+#             */
+/*   Updated: 2023/11/06 03:12:56 by seng             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+//while (--n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char	*str;
+	const unsigned char	str1;
+	const unsigned char	str2;
 
-	str = (unsigned char *) b;
-	while (len)
+	if (!n)
+		return (0);
+	str1 = (const unsigned char *)s1;
+	str2 = (const unsigned char *)s2;
+	n -= 1;
+	while (n && *str1 == *str2)
 	{
-		*str = (unsigned char)c;
-		str++;
-		len--;
+		str1++;
+		str2++;
+		n--;
 	}
-	return (b);
+	return ((int)(*str1 - *str2));
 }
-
-// int main(void)
-// {
-// 	char str[50];
-// 	strcpy(str, "This is string.h library function");
-// 	printf("%s",str);
-// 	ft_memset(str, '$', 5);
-// 	printf("\n");
-// 	printf("%s",str);
-// 	return (0);
-// }
