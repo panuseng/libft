@@ -1,39 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plaophit <plaophit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/13 00:35:35 by plaophit          #+#    #+#             */
-/*   Updated: 2023/11/04 20:58:09 by plaophit         ###   ########.fr       */
+/*   Created: 2023/11/05 03:55:29 by plaophit          #+#    #+#             */
+/*   Updated: 2023/11/05 04:50:15 by plaophit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned char	*str;
-
-	str = (unsigned char *) b;
-	while (len)
+	if (n < 0)
 	{
-		*str = (unsigned char)c;
-		str++;
-		len--;
+		ft_putchar_fb('-');
+		if (n == -2147483648)
+		{
+			ft_putchar_fb('2');
+			n = 147483648;
+		}
+		else
+			n *= -1;
 	}
-	return (b);
+	if (n > 9)
+		ft_putnbr_fb(n / 10);
+	ft_putchar_fb(n % 10 + '0');
 }
-
-// int main(void)
-// {
-// 	char str[50];
-// 	strcpy(str, "This is string.h library function");
-// 	printf("%s",str);
-// 	ft_memset(str, '$', 5);
-// 	printf("\n");
-// 	printf("%s",str);
-// 	return (0);
-// }

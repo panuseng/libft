@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plaophit <plaophit@student.42bangkok.co    +#+  +:+       +#+        */
+/*   By: plaophit <plaophit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 02:46:16 by plaophit          #+#    #+#             */
-/*   Updated: 2023/10/15 03:01:17 by plaophit         ###   ########.fr       */
+/*   Updated: 2023/11/04 20:57:54 by plaophit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *strnstr(const char *haystack, const char *needle, size_t len)
+char	*strnstr(const char *haystack, const char *needle, size_t len)
 {
 	int	i;
 
 	if (!*needle)
-		return(haystack);
+		return (haystack);
 	while (*haystack)
 	{
 		if (*haystack == *needle)
@@ -30,5 +30,4 @@ char *strnstr(const char *haystack, const char *needle, size_t len)
 		}
 		haystack++;
 	}
-
 }

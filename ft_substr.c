@@ -14,24 +14,25 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*s;
+	char	*str;
 
-	s = (char *)malloc(sizeof(char) * len + 1);
-	if (!*s)
-		return ('\0');
-	if (ft_strlen(s) < (size_t) start)
-		return (0);
+	str = (char *)malloc(sizeof(char) * len + 1);
+	if (!str || ft_strlen(s) < start)
+		return (NULL);
+	if (str)
+		ft_strlcpy(str, &s[start], len - start + 1);
+	return (str);
 }
 
-int	main(void)
-{
-	char	*str1;
-	unsigned int start;
-	int		len;
+// int	main(void)
+// {
+// 	char	*str1;
+// 	unsigned int start;
+// 	int		len;
 
-	start = 7;
-	len = 10;
-	str1 = "lorem ipsum";
+// 	start = 1;
+// 	str1 = "lorem ipsum";
+// 	len = ft_strlen(str1);
 
-	printf("%s", ft_substr(str1, start, len));
-}
+// 	printf("%s", ft_substr(str1, start, len));
+// }

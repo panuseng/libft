@@ -1,39 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plaophit <plaophit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/13 00:35:35 by plaophit          #+#    #+#             */
-/*   Updated: 2023/11/04 20:58:09 by plaophit         ###   ########.fr       */
+/*   Created: 2023/11/05 12:36:50 by plaophit          #+#    #+#             */
+/*   Updated: 2023/11/05 14:04:11 by plaophit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned char	*str;
+	char	*str;
+	int		i;
 
-	str = (unsigned char *) b;
-	while (len)
+	i = 0;
+	str = (char *)malloc(sizeof(char) * ft_strlen(s) + 1)
+		if (str)
+		return (NULL);
+	while (s[i])
 	{
-		*str = (unsigned char)c;
-		str++;
-		len--;
+		str[i] = f(i, s[i]);
+		i++;
 	}
-	return (b);
+	str[i] = '\0';
+	return (str);
 }
-
-// int main(void)
-// {
-// 	char str[50];
-// 	strcpy(str, "This is string.h library function");
-// 	printf("%s",str);
-// 	ft_memset(str, '$', 5);
-// 	printf("\n");
-// 	printf("%s",str);
-// 	return (0);
-// }

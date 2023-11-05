@@ -1,39 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plaophit <plaophit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/13 00:35:35 by plaophit          #+#    #+#             */
-/*   Updated: 2023/11/04 20:58:09 by plaophit         ###   ########.fr       */
+/*   Created: 2023/11/05 11:13:49 by plaophit          #+#    #+#             */
+/*   Updated: 2023/11/05 11:31:58 by plaophit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned char	*str;
+	int	i;
 
-	str = (unsigned char *) b;
-	while (len)
+	i = 0;
+	while (s[i])
 	{
-		*str = (unsigned char)c;
-		str++;
-		len--;
+		f(i, &s[i]);
+		i++;
 	}
-	return (b);
 }
+
+// void ft_putstr(unsigned int i, char *s)
+// {
+// 	while (s[i])
+// 	{
+// 		write(1, &s[i], 1);
+// 		i++;
+// 	}
+// }
 
 // int main(void)
 // {
-// 	char str[50];
-// 	strcpy(str, "This is string.h library function");
-// 	printf("%s",str);
-// 	ft_memset(str, '$', 5);
-// 	printf("\n");
-// 	printf("%s",str);
+// 	char *str = "hello";
+
+// 	ft_striteri(str, &ft_putstr);
 // 	return (0);
 // }
