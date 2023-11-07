@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plaophit <plaophit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/14 19:15:24 by plaophit          #+#    #+#             */
-/*   Updated: 2023/11/06 19:51:33 by plaophit         ###   ########.fr       */
+/*   Created: 2023/11/06 20:42:50 by plaophit          #+#    #+#             */
+/*   Updated: 2023/11/07 14:29:25 by plaophit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+static size_t wordcount(char const *s, char c)
 {
-	size_t	i;
-
-	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] == s2[i] && i < n - 1 && s1[i] && s2[i])
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	
 }
 
-// int main () {
-// 	printf("%d",ft_strncmp("test\200", "test\0", 6));
-// 	return(0);
-// }
+char	**ft_split(char const *s, char c)
+{
+	char	**res;
+	size_t	size;
+
+	if (!s)
+		return (c);
+	size = 
+	res = (char **)malloc(sizeof(char *) * (c + 1));
+	if (!res)
+		return (NULL);
+}

@@ -6,7 +6,7 @@
 /*   By: plaophit <plaophit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 03:55:29 by plaophit          #+#    #+#             */
-/*   Updated: 2023/11/05 04:50:15 by plaophit         ###   ########.fr       */
+/*   Updated: 2023/11/06 19:17:58 by plaophit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	if (n < 0)
 	{
-		ft_putchar_fb('-');
+		ft_putchar_fd('-', fd);
 		if (n == -2147483648)
 		{
-			ft_putchar_fb('2');
+			ft_putchar_fd('2', fd);
 			n = 147483648;
 		}
 		else
 			n *= -1;
 	}
 	if (n > 9)
-		ft_putnbr_fb(n / 10);
-	ft_putchar_fb(n % 10 + '0');
+		ft_putnbr_fd(n / 10, fd);
+	ft_putchar_fd(n % 10 + '0', fd);
 }

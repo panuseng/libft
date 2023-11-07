@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plaophit <plaophit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/14 19:15:24 by plaophit          #+#    #+#             */
-/*   Updated: 2023/11/06 19:51:33 by plaophit         ###   ########.fr       */
+/*   Created: 2023/11/06 16:29:00 by plaophit          #+#    #+#             */
+/*   Updated: 2023/11/07 02:51:35 by plaophit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
+	unsigned char	*d;
+	unsigned char	*s;
 
-	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] == s2[i] && i < n - 1 && s1[i] && s2[i])
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	d = (unsigned char *)dst;
+	s = (unsigned char *)src;
+	if (!d && !s)
+		return (NULL);
+	if (d < s && (dst || src))
+		ft_memcpy(dst, src, len);
+	else
+	{
+		while (len)
+		{
+			d[len - 1] = s[len - 1];
+			len--;
+		}
+	}
+	return (dst);
 }
-
-// int main () {
-// 	printf("%d",ft_strncmp("test\200", "test\0", 6));
-// 	return(0);
-// }
