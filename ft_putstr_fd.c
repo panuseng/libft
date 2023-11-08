@@ -6,7 +6,7 @@
 /*   By: plaophit <plaophit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 03:18:03 by plaophit          #+#    #+#             */
-/*   Updated: 2023/11/06 19:14:14 by plaophit         ###   ########.fr       */
+/*   Updated: 2023/11/07 17:42:18 by plaophit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)
 		return ;
-	write(fd, &s, ft_strlen(s));
+	write(fd, s, ft_strlen(s));
 }

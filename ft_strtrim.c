@@ -6,7 +6,7 @@
 /*   By: plaophit <plaophit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 21:08:19 by plaophit          #+#    #+#             */
-/*   Updated: 2023/11/05 00:26:35 by plaophit         ###   ########.fr       */
+/*   Updated: 2023/11/07 17:39:42 by plaophit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,23 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	j;
 	char	*str;
 
+	if (!s1)
+		return (NULL);
+	if (!set)
+		return (ft_strdup(s1));
 	str = 0;
-	if (s1 != 0 && set != 0)
-	{
-		i = 0;
-		j = ft_strlen(s1);
-		while (s1[i] && ft_strchr(set, s1[i]))
-			i++;
-		while (s1[j - 1] && ft_strchr(set, s1[j - 1]) && j > i)
-			j--;
-		str = (char *)malloc(sizeof(char) * (j - i + 1));
-		if (str)
-			ft_strlcpy(str, &s1[i], j - i + 1);
-	}
+	i = 0;
+	j = ft_strlen(s1);
+	if (j == 0)
+		return (ft_strdup(""));
+	while (s1[i] && ft_strchr(set, s1[i]))
+		i++;
+	while (s1[j - 1] && ft_strchr(set, s1[j - 1]) && j > i)
+		j--;
+	str = (char *)malloc(sizeof(char) * (j - i + 1));
+	if (!str)
+		return (NULL);
+	ft_strlcpy(str, &s1[i], j - i + 1);
 	return (str);
 }
 // int main(void)

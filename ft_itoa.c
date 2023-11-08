@@ -6,7 +6,7 @@
 /*   By: plaophit <plaophit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 18:53:31 by plaophit          #+#    #+#             */
-/*   Updated: 2023/11/06 20:46:51 by plaophit         ###   ########.fr       */
+/*   Updated: 2023/11/07 17:49:19 by plaophit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void	ft_nbr(int size, int c, int n, char *str)
 	}
 }
 
-size_t	getlen(int n)
+static size_t	getlen(int n)
 {
 	size_t	len;
 

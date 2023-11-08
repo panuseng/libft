@@ -15,24 +15,34 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
+	size_t	sizecheck;
 
-	str = (char *)malloc(sizeof(char) * len + 1);
+	if (!s)
+		return (NULL);
+	if (len > ft_strlen(s) - start)
+		sizecheck = ft_strlen(s) - start + 1;
+	else
+		sizecheck = len + 1;
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	str = (char *)malloc(sizeof(char) * sizecheck);
 	if (!str || ft_strlen(s) < start)
 		return (NULL);
-	if (str)
-		ft_strlcpy(str, &s[start], len - start + 1);
+	ft_strlcpy(str, &s[start], sizecheck);
 	return (str);
 }
 
 // int	main(void)
 // {
-// 	char	*str1;
-// 	unsigned int start;
-// 	int		len;
+// 	char 	*str = "01234";
+// 	size_t 	size = 10;
+// 	char 	*ret = ft_substr(str, 10, size);ç
 
-// 	start = 1;
-// 	str1 = "lorem ipsum";
-// 	len = ft_strlen(str1);
-
-// 	printf("%s", ft_substr(str1, start, len));
+// 	if (!strncmp(ret, "", 1))
+// 	{
+// 		free(ret);
+// 		printf("TEST_SUCCESS");
+// 	}
+// 	free(ret);
+// 	printf("TEST_FAILED");
 // }

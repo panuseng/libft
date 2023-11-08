@@ -6,7 +6,7 @@
 /*   By: plaophit <plaophit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 17:16:09 by plaophit          #+#    #+#             */
-/*   Updated: 2023/11/07 14:25:01 by plaophit         ###   ########.fr       */
+/*   Updated: 2023/11/07 17:27:29 by plaophit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_atoi(const char *str)
 	ng_check = 1;
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		i++;
-	while (str[i] && (str[i] == '+' || str[i] == '-'))
+	if (str[i] && (str[i] == '+' || str[i] == '-'))
 	{
 		if (str[i] == '-')
 			ng_check *= -1;
