@@ -6,7 +6,7 @@
 #    By: plaophit <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/06 17:30:31 by plaophit          #+#    #+#              #
-#    Updated: 2023/11/08 21:07:57 by plaophit         ###   ########.fr        #
+#    Updated: 2023/11/08 23:08:03 by plaophit         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
 
 clean:
-	rm -f $(OBJS) $(OBJSB)
+	rm -f $(OBJS)
 fclean: clean
-	rm -f $(NAME) $(bonus)
+	rm -f $(NAME)
 re: fclean all

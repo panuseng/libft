@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: plaophit <plaophit@student.42.fr>          +#+  +:+       +#+        */
+/*   By: plaophit <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/14 13:36:33 by plaophit          #+#    #+#             */
-/*   Updated: 2023/11/07 17:31:50 by plaophit         ###   ########.fr       */
+/*   Updated: 2023/11/08 23:03:13 by plaophit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
